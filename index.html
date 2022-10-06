@@ -1,17 +1,908 @@
-<!DOCTYPE html>
-<html lang="en">
+<script src="http://www.google.com/jsapi" type="text/javascript"></script> 
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
 
+<style type="text/css">
+	body {
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		font-weight:300;
+		font-size:18px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 1100px;
+	}
+	
+	h1 {
+		font-size:32px;
+		font-weight:300;
+	}
+	
+	.disclaimerbox {
+		background-color: #eee;		
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+		padding: 20px;
+	}
+
+	video.header-vid {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.header-img {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.rounded {
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	a:link,a:visited
+	{
+		color: #1367a7;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #208799;
+	}
+	
+	td.dl-link {
+		height: 160px;
+		text-align: center;
+		font-size: 22px;
+	}
+	
+	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+		15px 15px 0 0px #fff, /* The fourth layer */
+		15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+		20px 20px 0 0px #fff, /* The fifth layer */
+		20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+		25px 25px 0 0px #fff, /* The fifth layer */
+		25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+	.paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35); /* The top layer shadow */
+
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+
+	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+		margin-top: 5px;
+		margin-left: 10px;
+		margin-right: 30px;
+		margin-bottom: 5px;
+	}
+	
+	.vert-cent {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	
+	hr
+	{
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	}
+
+  .tab1 {
+      tab-size: 2;
+  }
+  
+  .tab2 {
+      tab-size: 4;
+  }
+  
+  .tab4 {
+      tab-size: 20;
+  }
+</style>
+
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
+	<title>align-cruse</title>
+	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
+	<meta property="og:title" content="Creative and Descriptive Paper Title." />
+	<meta property="og:description" content="Paper description." />
+
+	<!-- Get from Google Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src=""></script> 
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-75863369-6');
+	</script>
 </head>
 
 <body>
-  <main>
-    <h1>Vanilla JavaScript App</h1>
-  </main>
-</body>
+	<br>
+	<center>
+		<span style="font-size:36px">Deep model with built-in self-attention alignment for acoustic echo cancellation</span>
+		<table align=center width=1000px>
+			<table align=center width=1000px>
+				<tr>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:24px">Evgenii Indenbom</a></span>
+						</center>
+					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:24px"><a href="https://scholar.google.com/citations?user=W_1liH0AAAAJ&hl=en&oi=ao">Ristea Nicolae Catalin</a></span>
+						</center>
+					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:24px"><a href="https://scholar.google.com/citations?user=x6iXHP4AAAAJ&hl=en&oi=ao">Ando Saabas</a></span>
+						</center>
+					</td>
+          <td align=center width=100px>
+						<center>
+							<span style="font-size:24px">Tanel Parnamaa</a></span>
+						</center>
+					</td>
+          <td align=center width=100px>
+						<center>
+							<span style="font-size:24px">Jegor Gužvin</a></span>
+						</center>
+					</td>
+          <td align=center width=100px>
+						<center>
+							<span style="font-size:24px"><a href="https://scholar.google.com/citations?user=Qee1AwMAAAAJ&hl=en&oi=ao">Ross Cutler</a></span>
+						</center>
+					</td>
+				</tr>
+			</table>
+			<!-- <table align=center width=250px>
+				<tr>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href=''>[Paper]</a></span>
+						</center>
+					</td>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href='https://github.com/richzhang/webpage-template'>[GitHub]</a></span><br>
+						</center>
+					</td>
+				</tr>
+			</table> -->
+		</table>
+	</center>
 
+  <p></p>
+  <p></p>
+  <p></p>
+
+
+	<center>
+    <table align=center width=850px>
+			<tr>
+				<td width=460px>
+					<center>
+            <span style="font-size:24px">Align-CRUSE model architecture</a></span><br>
+					</center>
+				</td>
+			</tr>
+		</table>
+		<table align=center width=850px>
+			<tr>
+				<td width=460px>
+					<center>
+						<img class="round" style="width:1000px" src="./resources/model_arch.png"/>
+					</center>
+				</td>
+			</tr>
+		</table>
+	</center>
+
+	<hr>
+
+	<table align=center width=850px>
+		<center><h1>Abstract</h1></center>
+		<tr>
+			<td>
+				With recent research advances, deep learning models have become an attractive choice for acoustic echo cancellation (AEC) in real-time teleconferencing applications. Since acoustic echo is one of the major sources of poor audio quality, a wide variety of deep models have been proposed. However, an important but often omitted requirement for good echo cancellation quality is the synchronization of the microphone and far end signals. Typically implemented using classical algorithms based on cross-correlation, the alignment module is a separate functional block with known design limitations. In our work, we propose a deep learning architecture with built-in self-attention-based alignment, which is able to handle unaligned inputs, improving echo cancellation performance while simplifying the communication pipeline. Moreover, we show that our approach achieves significant improvements for difficult delay estimation cases on real recordings from the AEC Challenge data set.
+			</td>
+		</tr>
+	</table>
+	<br>
+
+	<!-- <hr> -->
+	<!-- <center><h1>Samples</h1></center> -->
+
+  <hr>
+	<center><h1>AEC Challenge test set (FEST-GEN and FEST-HD)</h1></center>
+	<hr>
+
+  <table style="width:1250">
+    <tbody>
+      <tr>
+        <td>
+          Microphone:
+        </td>
+        <td>
+            <audio controls="">
+              <source src="resources/aec-challenge/0c0RkyDyfkiAAp00V1qazQ_farend-singletalk_mic.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+        <td>
+          <img class="round" style="width:400px" src="resources/aec-challenge/0c0RkyDyfkiAAp00V1qazQ_farend-singletalk_mic.png"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Far end:
+        </td>
+        <td>
+          
+            <audio controls="">
+              <source src="resources/aec-challenge/0c0RkyDyfkiAAp00V1qazQ_farend-singletalk_lpb.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+        <td>
+          <img class="round" style="width:400px" src="resources/aec-challenge/0c0RkyDyfkiAAp00V1qazQ_farend-singletalk_lpb.png"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          CRUSE (online):
+        </td>
+        <td>
+          
+            <audio controls="">
+              <source src="resources/aec-challenge/0c0RkyDyfkiAAp00V1qazQ_farend-singletalk_cruse.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Align-CRUSE:
+        </td>
+        <td>
+          
+            <audio controls="">
+              <source src="resources/aec-challenge/0c0RkyDyfkiAAp00V1qazQ_farend-singletalk_acruse.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+        <td>
+          <p>Align feature map</p>
+          <img class="round" style="width:400px" src="resources/aec-challenge/0c0RkyDyfkiAAp00V1qazQ_farend-singletalk_alignMap.png"/>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+  <hr>
+
+
+
+
+
+  <table style="width:1250">
+    <tbody>
+      <tr>
+        <td>
+          Microphone:
+        </td>
+        <td>
+            <audio controls="">
+              <source src="resources/aec-challenge/292b2146-77e9-4c33-82c1-31fc3b32e8a6_farend-singletalk_mic.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+        <td>
+          <img class="round" style="width:400px" src="resources/aec-challenge/292b2146-77e9-4c33-82c1-31fc3b32e8a6_farend-singletalk_mic.png"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Far end:
+        </td>
+        <td>
+          
+            <audio controls="">
+              <source src="resources/aec-challenge/292b2146-77e9-4c33-82c1-31fc3b32e8a6_farend-singletalk_lpb.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+        <td>
+          <img class="round" style="width:400px" src="resources/aec-challenge/292b2146-77e9-4c33-82c1-31fc3b32e8a6_farend-singletalk_lpb.png"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          CRUSE (online):
+        </td>
+        <td>
+          
+            <audio controls="">
+              <source src="resources/aec-challenge/292b2146-77e9-4c33-82c1-31fc3b32e8a6_farend-singletalk_cruse.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Align-CRUSE:
+        </td>
+        <td>
+          
+            <audio controls="">
+              <source src="resources/aec-challenge/292b2146-77e9-4c33-82c1-31fc3b32e8a6_farend-singletalk_acruse.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+        <td>
+          <p>Align feature map</p>
+          <img class="round" style="width:400px" src="resources/aec-challenge/292b2146-77e9-4c33-82c1-31fc3b32e8a6_farend-singletalk_alignMap.png"/>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+	<hr>
+
+
+
+
+
+  <table style="width:1250">
+    <tbody>
+      <tr>
+        <td>
+          Microphone:
+        </td>
+        <td>
+            <audio controls="">
+              <source src="resources/aec-challenge/0c8e3f01-ec41-4e32-b2d6-60857c9de3fb_farend-singletalk_mic.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+        <td>
+          <img class="round" style="width:400px" src="resources/aec-challenge/0c8e3f01-ec41-4e32-b2d6-60857c9de3fb_farend-singletalk_mic.png"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Far end:
+        </td>
+        <td>
+          
+            <audio controls="">
+              <source src="resources/aec-challenge/0c8e3f01-ec41-4e32-b2d6-60857c9de3fb_farend-singletalk_lpb.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+        <td>
+          <img class="round" style="width:400px" src="resources/aec-challenge/0c8e3f01-ec41-4e32-b2d6-60857c9de3fb_farend-singletalk_lpb.png"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          CRUSE (online):
+        </td>
+        <td>
+          
+            <audio controls="">
+              <source src="resources/aec-challenge/0c8e3f01-ec41-4e32-b2d6-60857c9de3fb_farend-singletalk_cruse.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Align-CRUSE:
+        </td>
+        <td>
+          
+            <audio controls="">
+              <source src="resources/aec-challenge/0c8e3f01-ec41-4e32-b2d6-60857c9de3fb_farend-singletalk_acruse.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+        <td>
+          <p>Align feature map</p>
+          <img class="round" style="width:400px" src="resources/aec-challenge/0c8e3f01-ec41-4e32-b2d6-60857c9de3fb_farend-singletalk_alignMap.png"/>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <hr>
+
+
+
+
+
+  <table style="width:1250">
+    <tbody>
+      <tr>
+        <td>
+          Microphone:
+        </td>
+        <td>
+            <audio controls="">
+              <source src="resources/aec-challenge/0fHajFljsUGJAlicYxKOUA_farend-singletalk_mic.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+        <td>
+          <img class="round" style="width:400px" src="resources/aec-challenge/0fHajFljsUGJAlicYxKOUA_farend-singletalk_mic.png"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Far end:
+        </td>
+        <td>
+          
+            <audio controls="">
+              <source src="resources/aec-challenge/0fHajFljsUGJAlicYxKOUA_farend-singletalk_lpb.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+        <td>
+          <img class="round" style="width:400px" src="resources/aec-challenge/0fHajFljsUGJAlicYxKOUA_farend-singletalk_lpb.png"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          CRUSE (online):
+        </td>
+        <td>
+          
+            <audio controls="">
+              <source src="resources/aec-challenge/0fHajFljsUGJAlicYxKOUA_farend-singletalk_cruse.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Align-CRUSE:
+        </td>
+        <td>
+          
+            <audio controls="">
+              <source src="resources/aec-challenge/0fHajFljsUGJAlicYxKOUA_farend-singletalk_acruse.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+        <td>
+          <p>Align feature map</p>
+          <img class="round" style="width:400px" src="resources/aec-challenge/0fHajFljsUGJAlicYxKOUA_farend-singletalk_alignMap.png"/>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+  <hr>
+
+
+
+
+
+  <table style="width:1250">
+    <tbody>
+      <tr>
+        <td>
+          Microphone:
+        </td>
+        <td>
+            <audio controls="">
+              <source src="resources/aec-challenge/154d7bfe-8d19-4989-9494-10c97b11a26c_farend-singletalk_mic.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+        <td>
+          <img class="round" style="width:400px" src="resources/aec-challenge/154d7bfe-8d19-4989-9494-10c97b11a26c_farend-singletalk_mic.png"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Far end:
+        </td>
+        <td>
+          
+            <audio controls="">
+              <source src="resources/aec-challenge/154d7bfe-8d19-4989-9494-10c97b11a26c_farend-singletalk_lpb.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+        <td>
+          <img class="round" style="width:400px" src="resources/aec-challenge/154d7bfe-8d19-4989-9494-10c97b11a26c_farend-singletalk_lpb.png"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          CRUSE (online):
+        </td>
+        <td>
+          
+            <audio controls="">
+              <source src="resources/aec-challenge/154d7bfe-8d19-4989-9494-10c97b11a26c_farend-singletalk_cruse.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Align-CRUSE:
+        </td>
+        <td>
+          
+            <audio controls="">
+              <source src="resources/aec-challenge/154d7bfe-8d19-4989-9494-10c97b11a26c_farend-singletalk_acruse.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+        <td>
+          <p>Align feature map</p>
+          <img class="round" style="width:400px" src="resources/aec-challenge/154d7bfe-8d19-4989-9494-10c97b11a26c_farend-singletalk_alignMap.png"/>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+
+
+
+
+
+  <hr>
+	<center><h1>Synthetic (0.3-0.5)s delays test set (LD-M)</h1></center>
+	<hr>
+
+	<table style="width:1250">
+    <tbody>
+      <tr>This test set is synthetically created, therefore we included the label delay and the estimated delay from the align feature map.</tr>
+
+      <tr>
+        <td>
+          Microphone:
+        </td>
+        <td>
+            <audio controls="">
+              <source src="resources/ld-m/2af5af46a14a2670--delay_305--ser_-1--mic.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+        <td>
+          <img class="round" style="width:400px" src="resources/ld-m/2af5af46a14a2670--delay_305--ser_-1--lpb.png"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Far end:
+        </td>
+        <td>
+          
+            <audio controls="">
+              <source src="resources/ld-m/2af5af46a14a2670--delay_305--ser_-1--lpb.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+        <td>
+          <img class="round" style="width:400px" src="resources/ld-m/2af5af46a14a2670--delay_305--ser_-1--lpb.png"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          CRUSE (online):
+        </td>
+        <td>
+          
+            <audio controls="">
+              <source src="resources/ld-m/2af5af46a14a2670--delay_305--ser_-1--cruse.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Align-CRUSE:
+        </td>
+        <td>
+          
+            <audio controls="">
+              <source src="resources/ld-m/2af5af46a14a2670--delay_305--ser_-1--acruse.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+        <td>
+          <p>Align feature map</p>
+          <img class="round" style="width:400px" src="resources/ld-m/2af5af46a14a2670--delay_305--ser_-1--alignMap.png"/>
+          <p>True delay: 305ms, Estimated average delay: 315ms</p>
+
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+
+
+
+
+	<hr>
+
+
+
+
+
+  <table style="width:1250">
+    <tbody>
+      <tr>
+        <td>
+          Microphone:
+        </td>
+        <td>
+            <audio controls="">
+              <source src="resources/ld-m/2b2839c509ec753c--delay_355--ser_3--mic.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+        <td>
+          <img class="round" style="width:400px" src="resources/ld-m/2b2839c509ec753c--delay_355--ser_3--mic.png"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Far end:
+        </td>
+        <td>
+          
+            <audio controls="">
+              <source src="resources/ld-m/2b2839c509ec753c--delay_355--ser_3--lpb.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+        <td>
+          <img class="round" style="width:400px" src="resources/ld-m/2b2839c509ec753c--delay_355--ser_3--lpb.png"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          CRUSE (online):
+        </td>
+        <td>
+          
+            <audio controls="">
+              <source src="resources/ld-m/2b2839c509ec753c--delay_355--ser_3--cruse.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Align-CRUSE:
+        </td>
+        <td>
+          
+            <audio controls="">
+              <source src="resources/ld-m/2b2839c509ec753c--delay_355--ser_3--acruse.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+        <td>
+          <p>Align feature map</p>
+          <img class="round" style="width:400px" src="resources/ld-m/2b2839c509ec753c--delay_355--ser_3--alignMap.png"/>
+          <p>True delay: 355ms, Estimated average delay: 361ms </p>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+
+  <hr>
+	<center><h1>Synthetic (0.5-1.0)s delays test set (LD-H)</h1></center>
+	<hr>
+
+  <table style="width:1250">
+    <tbody>
+      <tr>This test set is synthetically created, therefore we included the label delay and the estimated delay from the align feature map.</tr>
+      <tr>
+        <td>
+          Microphone:
+        </td>
+        <td>
+            <audio controls="">
+              <source src="resources/ld-h/55ad7ac9e214fc95--delay_763--ser_-3--mic.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+        <td>
+          <img class="round" style="width:400px" src="resources/ld-h/55ad7ac9e214fc95--delay_763--ser_-3--mic.png"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Far end:
+        </td>
+        <td>
+          
+            <audio controls="">
+              <source src="resources/ld-h/55ad7ac9e214fc95--delay_763--ser_-3--lpb.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+        <td>
+          <img class="round" style="width:400px" src="resources/ld-h/55ad7ac9e214fc95--delay_763--ser_-3--lpb.png"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          CRUSE (online):
+        </td>
+        <td>
+          
+            <audio controls="">
+              <source src="resources/ld-h/55ad7ac9e214fc95--delay_763--ser_-3--cruse.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Align-CRUSE:
+        </td>
+        <td>
+          
+            <audio controls="">
+              <source src="resources/ld-h/55ad7ac9e214fc95--delay_763--ser_-3--acruse.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+        <td>
+          <p>Align feature map</p>
+          <img class="round" style="width:400px" src="resources/ld-h/55ad7ac9e214fc95--delay_763--ser_-3--alignMap.png"/>
+          <p>True delay: 763ms, Estimated average delay: 739ms</p>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+
+	<hr>
+
+
+
+
+
+  <table style="width:1250">
+    <tbody>
+      <tr>
+        <td>
+          Microphone:
+        </td>
+        <td>
+            <audio controls="">
+              <source src="resources/ld-h/57a8a7f78f6a41eb--delay_916--ser_-6--mic.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+        <td>
+          <img class="round" style="width:400px" src="resources/ld-h/57a8a7f78f6a41eb--delay_916--ser_-6--mic.png"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Far end:
+        </td>
+        <td>
+          
+            <audio controls="">
+              <source src="resources/ld-h/57a8a7f78f6a41eb--delay_916--ser_-6--lpb.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+        <td>
+          <img class="round" style="width:400px" src="resources/ld-h/57a8a7f78f6a41eb--delay_916--ser_-6--lpb.png"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          CRUSE (online):
+        </td>
+        <td>
+          
+            <audio controls="">
+              <source src="resources/ld-h/57a8a7f78f6a41eb--delay_916--ser_-6--cruse.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Align-CRUSE:
+        </td>
+        <td>
+          
+            <audio controls="">
+              <source src="resources/ld-h/57a8a7f78f6a41eb--delay_916--ser_-6--acruse.wav" type="audio/wav">
+            </audio>
+          
+        </td>
+        <td>
+          <p>Align feature map</p>
+          <img class="round" style="width:400px" src="resources/ld-h/57a8a7f78f6a41eb--delay_916--ser_-6--alignMap.png"/>
+          <p>True delay: 916ms, Estimated average delay: 905ms</p>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+  <center><h1>Additional information</h1></center>
+  <hr>
+
+  <ul style=“list-style-type:square”>
+
+    <li>We included samples only for Align-CRUSE and online CRUSE, since CRUSE tested on unaligned data is considerably worse (see Table 1 from paper) and global aligned CRUSE is not feasible for real-time applications.</li>
+    
+    <li>The <b>align feature map</b> represents the delay distributions (between 0 and 1 second) for 20ms frames. More precisely, the vertical axis represents the probability delay distribution for a certain frame index.</li>
+    
+    <li>For a better align feature map visualization, we included only the middle 500 frames from a sample.</li>
+    
+    <li>The estimated average delay is computed by averaging the highest probability delay for each frame in the sample. It was reported only for synthetically data sets since for those samples we have the ground-truth.</li>
+
+    </ul>
+
+<br>
+</body>
 </html>
