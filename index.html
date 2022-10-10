@@ -126,6 +126,10 @@
   .tab4 {
       tab-size: 20;
   }
+  
+  td {
+  padding: 10px;
+}
 </style>
 
 <html>
@@ -203,9 +207,8 @@
 		</table>
 	</center>
 
-  <p></p>
-  <p></p>
-  <p></p>
+  <!-- <p></p> -->
+  <!-- <p></p> -->
 
   <center>
     <table align=center width=850px>
@@ -272,6 +275,66 @@
 			<td>
 				With recent research advances, deep learning models have become an attractive choice for acoustic echo cancellation (AEC) in real-time teleconferencing applications. Since acoustic echo is one of the major sources of poor audio quality, a wide variety of deep models have been proposed. However, an important but often omitted requirement for good echo cancellation quality is the synchronization of the microphone and far end signals. Typically implemented using classical algorithms based on cross-correlation, the alignment module is a separate functional block with known design limitations. In our work, we propose a deep learning architecture with built-in self-attention-based alignment, which is able to handle unaligned inputs, improving echo cancellation performance while simplifying the communication pipeline. Moreover, we show that our approach achieves significant improvements for difficult delay estimation cases on real recordings from the AEC Challenge data set.
 			</td>
+		</tr>
+	</table>
+	<br>
+
+  <table align=center width=1200px>
+    <hr>
+		<center><h1>Extended results</h1></center>
+    <hr>
+		<tr>
+			<table align=center border="1">
+        <tr>
+          <th>Method</th>
+          <th>FEST</th>
+          <th>DT Echo</th>
+          <th>DT Other</th>
+          <th>Inferance time</th>
+          <th>Measurement</th>
+        </tr>
+        <tr>
+          <th></th>
+          <th>MOS</th>
+          <th>MOS</th>
+          <th>MOS</th>
+          <th>per frame (ms)</th>
+          <th>Device</th>
+        </tr>
+        <tr>
+          <td><a href="https://www.isca-speech.org/archive/pdfs/interspeech_2021/peng21f_interspeech.pdf">#1 Place AEC Challenge</a></td>
+          <td>4.34</td>
+          <td>4.36</td>
+          <td>4.23</td>
+          <td>2.62</td>
+          <td>i5-4300 CPU @1.9GHz</td>
+        </tr>
+        <tr>
+          <td><a href="https://arxiv.org/pdf/2106.07577.pdf">#2 Place AEC Challenge</a></td>
+          <td>4.44</td>
+          <td>4.44</td>
+          <td>3.90</td>
+          <td>4.385</td>
+          <td>Xeon(R) CPU E5-2640@2.50GHz</td>
+        </tr>
+        <tr>
+          <td>CRUSE (online)</td>
+          <td>4.55</td>
+          <td>4.42</td>
+          <td>4.07</td>
+          <td>0.216</td>
+          <td>i7 11370H@3.3 GHz</td>
+        </tr>
+        <tr>
+          <td>Align-CRUSE</td>
+          <td>4.67</td>
+          <td>4.45</td>
+          <td>4.07</td>
+          <td>0.218</td>
+          <td>i7 11370H@3.3 GHz</td>
+
+        </tr>
+      </table>
 		</tr>
 	</table>
 	<br>
