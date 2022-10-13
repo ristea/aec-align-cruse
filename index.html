@@ -318,6 +318,14 @@
           <td>Xeon(R) CPU E5-2640@2.50GHz</td>
         </tr>
         <tr>
+          <td><a href="https://www.microsoft.com/en-us/research/academic-program/acoustic-echo-cancellation-challenge-interspeech-2021/results">#1 Rank AEC Challenge</a></td>
+          <td>4.59</td>
+          <td><b>4.69</b></td>
+          <td>4.18</td>
+          <td> N/A</td>
+          <td>N/A</td>
+        </tr>
+        <tr>
           <td>CRUSE (online)</td>
           <td>4.55</td>
           <td>4.42</td>
@@ -328,7 +336,7 @@
         <tr>
           <td>Align-CRUSE</td>
           <td><b>4.67</b></td>
-          <td><b>4.45</b></td>
+          <td>4.45</td>
           <td>4.07</td>
           <td>0.218</td>
           <td>i7 11370H@3.3 GHz</td>
@@ -337,8 +345,82 @@
       </table>
 		</tr>
 	</table>
-	<br>
 
+
+  <table align=center width=1200px>
+    <hr>
+		<center><h1>Noise Suppression results</h1></center>
+    <hr>
+		<tr>
+			<table align=center border="1">
+        <tr>
+          <th>Method</th>
+          <th>SIG</th>
+          <th>BAK</th>
+          <th>OVR</th>
+          <th>Inferance time</th>
+          <th>Measurement</th>
+        </tr>
+        <!-- <tr>
+          <th></th>
+          <th>MOS</th>
+          <th>MOS</th>
+          <th>MOS</th>
+          <th>per frame (ms)</th>
+          <th>Device</th>
+        </tr> -->
+        <tr>
+          <td><a href="https://www.isca-speech.org/archive/pdfs/interspeech_2021/peng21f_interspeech.pdf">#1 Place AEC Challenge</a></td>
+          <td>4.39</td>
+          <td><b>4.59</b></td>
+          <td><b>4.11</b></td>
+          <td>2.62</td>
+          <td>i5-4300 CPU @1.9GHz</td>
+        </tr>
+        <tr>
+          <td><a href="https://arxiv.org/pdf/2106.07577.pdf">#2 Place AEC Challenge</a></td>
+          <td>3.78</td>
+          <td>4.21</td>
+          <td>3.52</td>
+          <td>4.385</td>
+          <td>Xeon(R) CPU E5-2640@2.50GHz</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.microsoft.com/en-us/research/academic-program/acoustic-echo-cancellation-challenge-interspeech-2021/results">#1 Rank AEC Challenge</a></td>
+          <td>4.37</td>
+          <td>4.58</td>
+          <td>4.07</td>
+          <td> N/A</td>
+          <td>N/A</td>
+        </tr>
+        <tr>
+          <td>CRUSE (online)</td>
+          <td><b>4.41</b></td>
+          <td>4.54</td>
+          <td>4.11</td>
+          <td><b>0.216</b></td>
+          <td>i7 11370H@3.3 GHz</td>
+        </tr>
+        <tr>
+          <td>Align-CRUSE</td>
+          <td>4.39</td>
+          <td>4.55</td>
+          <td>4.10</td>
+          <td>0.218</td>
+          <td>i7 11370H@3.3 GHz</td>
+
+        </tr>
+      </table>
+		</tr>
+	</table>
+  <p>To have a more comprehensive view of our model, we tested the noise suppression capability on the blind test set from the 
+    <a href="https://www.microsoft.com/en-us/research/academic-program/acoustic-echo-cancellation-challenge-interspeech-2021/">AEC Challenge</a>. 
+    We additionally reported the DNSMOS P.835 Signal (SIG), background (BAK) and overall (OVR). In the above table we observe that Align-CRUSE has competitive results with state-of-the-art methods for both noise suppression and AEC. 
+    This highlights that our model is able to jointly enhance the audio quality and cancel echoes. 
+    Considering the inference time and the quality results, we conclude that Align-CRUSE is state-of-the-art method for low-complexity AEC.
+  </p>
+	<br>
+  
 	<!-- <hr> -->
 	<!-- <center><h1>Samples</h1></center> -->
 
