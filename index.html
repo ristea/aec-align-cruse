@@ -279,6 +279,15 @@
 	</table>
 	<br>
 
+  <hr>
+	<center><h1>Official DEMO</h1></center>
+	<hr>
+
+  <center><iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RE4ZhQW?autoplay=false" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="talk-1d-540p"></iframe></center>
+
+  
+
+
   <table align=center width=1200px>
     <hr>
 		<center><h1>Extended results</h1></center>
@@ -349,12 +358,13 @@
 
   <table align=center width=1200px>
     <hr>
-		<center><h1>Noise Suppression results</h1></center>
+		<center><h1>Reverb and Noise Suppression results</h1></center>
     <hr>
 		<tr>
 			<table align=center border="1">
         <tr>
           <th>Method</th>
+          <th>SRR (dB)</th>
           <th>SIG</th>
           <th>BAK</th>
           <th>OVR</th>
@@ -371,6 +381,7 @@
         </tr> -->
         <tr>
           <td><a href="https://www.isca-speech.org/archive/pdfs/interspeech_2021/peng21f_interspeech.pdf">#1 Place AEC Challenge</a></td>
+          <td>35.87</td>
           <td>4.39</td>
           <td><b>4.59</b></td>
           <td><b>4.11</b></td>
@@ -379,6 +390,7 @@
         </tr>
         <tr>
           <td><a href="https://arxiv.org/pdf/2106.07577.pdf">#2 Place AEC Challenge</a></td>
+          <td>34.79</td>
           <td>3.78</td>
           <td>4.21</td>
           <td>3.52</td>
@@ -387,6 +399,7 @@
         </tr>
         <tr>
           <td><a href="https://www.microsoft.com/en-us/research/academic-program/acoustic-echo-cancellation-challenge-interspeech-2021/results">#1 Rank AEC Challenge</a></td>
+          <td>34.37</td>
           <td>4.37</td>
           <td>4.58</td>
           <td>4.07</td>
@@ -395,6 +408,7 @@
         </tr>
         <tr>
           <td>CRUSE (online)</td>
+          <td>36.54</td>
           <td><b>4.41</b></td>
           <td>4.54</td>
           <td>4.11</td>
@@ -403,6 +417,7 @@
         </tr>
         <tr>
           <td>Align-CRUSE</td>
+          <td><b>37.47</b></td>
           <td>4.39</td>
           <td>4.55</td>
           <td>4.10</td>
@@ -413,11 +428,15 @@
       </table>
 		</tr>
 	</table>
-  <p>To have a more comprehensive view of our model, we tested the noise suppression capability on the blind test set from the 
+  <p>To have a more comprehensive view of our model, we tested the reverb and noise suppression capability on the blind near end test set from the 
     <a href="https://www.microsoft.com/en-us/research/academic-program/acoustic-echo-cancellation-challenge-interspeech-2021/">AEC Challenge</a>. 
-    We additionally reported the DNSMOS P.835 Signal (SIG), background (BAK) and overall (OVR). In the above table we observe that Align-CRUSE has competitive results with state-of-the-art methods for both noise suppression and AEC. 
+    We additionally reported speech-to-reverberation ratio (SRR), the DNSMOS P.835 Signal (SIG), background (BAK) and overall (OVR). 
+    The SRR value is estimated in decibels with an internal deep model.
+    In the above table we observe that Align-CRUSE has competitive results with state-of-the-art methods for both noise suppression and AEC.
+    Regarding the reverb removal capacity, we observe that our model obtains the best results.
     This highlights that our model is able to jointly enhance the audio quality and cancel echoes. 
-    Considering the inference time and the quality results, we conclude that Align-CRUSE is state-of-the-art method for low-complexity AEC.
+    <p>    Considering the inference time and the quality results, we conclude that Align-CRUSE is state-of-the-art method for low-complexity AEC, which also attains very good results for the reverb and noise reduction tasks.
+    </p>
   </p>
 	<br>
   
@@ -427,8 +446,6 @@
   <hr>
 	<center><h1>AEC Challenge test set (FEST-GEN and FEST-HD)</h1></center>
 	<hr>
-
-
 
   <table style="width:1250">
     <tbody>
