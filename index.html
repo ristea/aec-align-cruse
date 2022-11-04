@@ -373,9 +373,9 @@
           <th>SRR (dB)</th>
           <th>SIG</th>
           <th>BAK</th>
-          <th>OVR</th>
+          <th>OVRL</th>
           <th>Inference time</th>
-          <th>Measurement</th>
+          <th>Measurement device</th>
         </tr>
         <!-- <tr>
           <th></th>
@@ -385,6 +385,15 @@
           <th>per frame (ms)</th>
           <th>Device</th>
         </tr> -->
+        <tr>
+          <td>Noisy</td>
+          <td>15.24</td>
+          <td>3.13</td>
+          <td>3.26</td>
+          <td>2.67</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
         <tr>
           <td><a href="https://www.isca-speech.org/archive/pdfs/interspeech_2021/peng21f_interspeech.pdf">#1 Place AEC Challenge</a></td>
           <td>35.87</td>
@@ -436,7 +445,7 @@
 	</table>
   <p>To have a more comprehensive view of our model, we tested the reverb and noise suppression capability on the blind near end test set from the 
     <a href="https://www.microsoft.com/en-us/research/academic-program/acoustic-echo-cancellation-challenge-interspeech-2021/">AEC Challenge</a>. 
-    We additionally reported speech-to-reverberation ratio (SRR), the DNSMOS P.835 Signal (SIG), background (BAK) and overall (OVR). 
+    We additionally reported speech-to-reverberation ratio (SRR), the DNSMOS P.835 Signal (SIG), background (BAK) and overall (OVRL). 
     The SRR value is estimated in decibels with an internal deep model.
     In the above table we observe that Align-CRUSE has competitive results with state-of-the-art methods for both noise suppression and AEC.
     Regarding the reverb removal capacity, we observe that our model obtains the best results.
